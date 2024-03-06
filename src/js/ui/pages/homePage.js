@@ -13,7 +13,7 @@ import initStepIntoFuture from "./../components/initStepIntoFuture.js";
 import initFooter from "./../components/initFooter.js";
 import initLawProtected from "./../components/initLawProtected.js";
 
-const initHomePage = (element) => {
+const initHomePage1 = (element) => {
   const template = `
     <section class="section header"></section>
     <section class="section hero_section"></section>
@@ -32,13 +32,24 @@ const initHomePage = (element) => {
   element.insertAdjacentHTML("beforeend", template);
 };
 
+const initHomePage2 = (element) => {
+  const template = `
+    <section class="section step_into_future"></section>
+    <section class="section footer"></section>
+    <section class="law_protected"></section>
+  `;
+
+  element.insertAdjacentHTML("beforeend", template);
+};
+
 const rootNode1 = document.querySelector(".page");
 const rootNode2 = document.querySelector(".page2");
 // const rootNode2 = document.querySelector("#root2");
 
 const homePage = () => {
   // инициализация элементов Главной страницы
-  initHomePage(rootNode1);
+  initHomePage1(rootNode1);
+  initHomePage2(rootNode2);
   // initHomePage(rootNode2);
 
   // инициализация шапки страницы с мок датой
