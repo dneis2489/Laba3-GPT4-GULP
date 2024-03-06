@@ -1,0 +1,1115 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "ManropeBold";
+  src: url(../fonts/Manrope-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: "ManropeLight";
+  src: url(../fonts/Manrope-Light.ttf);
+}
+
+/* Сброс базовых стилей */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  outline: none;
+}
+
+/* Общие стили для всего приложения */
+
+body {
+  background: #031b34;
+  padding: 0;
+  overflow: auto;
+  width: 100%;
+}
+
+body.oh {
+  overflow: hidden;
+}
+
+.page {
+  background: #020f1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.page2 {
+  background: #031b34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+a:hover,
+button:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+button:hover {
+  background-color: #ae67fa;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 60px;
+  color: #ae67fa;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h1,
+h2 {
+  font-family: "ManropeBold", sans-serif;
+  background: linear-gradient(90deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "ManropeBold", sans-serif;
+  color: #fff;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.btn {
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.primary-btn {
+  background-color: #ff4820;
+}
+
+.section {
+  max-width: 1169px;
+  width: 100%;
+}
+
+.lined_header {
+  background: url("../assets/img/gradient_line.svg") no-repeat 0 0 transparent;
+  padding: 1rem 0;
+}
+
+/* Стили для Шапки */
+
+.header {
+  display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background: #020f1c;
+  column-gap: 5vw;
+  justify-content: center;
+}
+
+.header .header-logo {
+  width: 162px;
+}
+
+.header .header__logo .logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__menu .menu {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.header .header__menu .menu .menu__item a {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.header .header__menu .menu .menu__item:hover a {
+  border-bottom-color: #fff;
+}
+
+.header .header__menu .menu .menu__item.active a {
+  color: #f49867;
+  border-bottom-color: #f49867;
+}
+
+.header .cta_buttons {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.header .header__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 9vw;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.header .header__right.hidden {
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.header .header__right .menu__close {
+  width: 38px;
+  height: 38px;
+}
+
+.header .header__right .menu__close.hidden {
+  display: none;
+}
+
+.header .header__burger_menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.header .header__burger_menu.hidden {
+  display: none;
+}
+
+.header .header__burger_menu .burger_menu__line,
+.header .header__right .menu__close .menu__line {
+  width: 43px;
+  height: 5px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.header .header__right .menu__close .menu__line:nth-child(1) {
+  position: relative;
+  top: 15px;
+  right: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.header .header__right .menu__close .menu__line:nth-child(2) {
+  position: relative;
+  top: 10px;
+  right: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+/* Стили для первого экрана (Хиро секция) */
+
+.hero_section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  min-height: 60vh;
+  margin: 14rem 0 3rem;
+  padding: 10px;
+}
+
+.hero_section .hero_section__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 75%;
+}
+
+.hero_section .hero_section__left .left__description {
+  color: #81afdd;
+}
+
+.hero_section .hero_section__left .left__cta_buttons {
+  display: flex;
+  width: 100%;
+}
+
+.hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+  min-width: 250px;
+  width: 70%;
+  padding: 8px 32px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #052d56;
+  border-bottom: none;
+  background-color: #052d56;
+}
+
+.hero_section .hero_section__left .left__cta_buttons .btn {
+  border-radius: 0 4px 4px 0;
+}
+
+.hero_section .hero_section__right {
+  height: 100%;
+}
+
+.hero_section .hero_section__right img {
+  width: 100%;
+}
+
+/* Секция брендов */
+
+.brands_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 6rem 0;
+  column-gap: 3rem;
+}
+
+/* Что такое Chat GPT */
+
+.what_is_chatgpt_section {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin: 6rem 0;
+  row-gap: 7rem;
+  background: url(../assets/img/what_is_gpt_3_bg.png) no-repeat 0 0 / cover;
+  margin: 0 10px 0 10px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top {
+  display: flex;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top .top__header {
+  flex: 30%;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top .top__content {
+  flex: 65%;
+  color: #81afdd;
+  font-size: 14px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
+  width: 500px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle a {
+  color: #ff8a71;
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle a:hover {
+  border-bottom: 1px solid #ff8a71;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 2rem;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container .container__content {
+  color: #81afdd;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Будущее наступило */
+
+.future_here {
+  display: flex;
+  column-gap: 6rem;
+  margin: 6rem 0 2rem;
+  padding: 0 10px;
+}
+
+.future_here .future_here__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+  flex: 2;
+}
+
+/* .future_here .future_here__left .left__header {
+} */
+
+.future_here .future_here__left .left__cta {
+  color: #f49867;
+  border-bottom: 1px solid transparent;
+}
+
+.future_here .future_here__left a:hover {
+  border-bottom: 1px solid #f49867;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.future_here .future_here__right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.future_here .future_here__right .right__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.future_here .future_here__right .right__container .container__header {
+  width: 35%;
+}
+
+.future_here .future_here__right .right__container .container__content {
+  width: 55%;
+  color: #81afdd;
+}
+
+/* Медиа запросы для адаптива */
+
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+/* Превосходя все ожидания */
+.exceeding_all_expectations {
+  display: flex;
+  column-gap: 1rem;
+  margin: 1rem 0 2rem 0;
+  padding: 0 73px 0 37px;
+}
+
+.exceeding_all_expectations .exceeding_all_expectations_section_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 35px;
+  row-gap: 1.5rem;
+}
+
+.exceeding_all_expectations .exceeding_all_expectations_section_right .early_access {
+  color: #71E5FF;
+}
+
+.exceeding_all_expectations .exceeding_all_expectations_section_right .left__header {
+  width: 66%;
+}
+
+.exceeding_all_expectations .exceeding_all_expectations_section_right .container__content {
+  color: #81afdd;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.exceeding_all_expectations .exceeding_all_expectations_section_right .left__cta {
+  color: #f49867;
+  border-bottom: 1px solid transparent;
+}
+
+.exceeding_all_expectations .exceeding_all_expectations_section_right a:hover {
+  border-bottom: 1px solid #f49867;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
+/* Регистрация */
+.registration {
+  display: flex;
+  height: 173px;
+  column-gap: 2rem;
+  margin: 2rem 0 6rem;
+  padding: 0 10px;
+  border: #000000 1px solid;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ae67fa 1.84%, #f49867 102.67%);
+}
+
+.registration .registration_content_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 46px;
+}
+
+.registration .registration_content_left .early_access {
+  color: #000000;
+  font-size: 14px;
+}
+
+.registration .registration_content_left .registration_text {
+  color: #000000;
+  width: 66%;
+}
+
+.registration .registration_button_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registration .registration_button_right a button {
+  background-color: #000000;
+  padding: 1rem 4rem;
+  border-radius: 25px;
+  font-size: 18px;
+}
+
+.registration .registration_button_right a button:hover {
+  background-color: #ae67fa
+}
+
+/* Многое происходит */
+
+.blog_section {
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+}
+
+.blog_section .headder_section {
+  width: 66%;
+  margin-bottom: 1rem;
+}
+
+.blog_section .all_news {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+}
+
+.blog_section .all_news .main_news {
+  display: flex;
+  flex-direction: column;
+  max-height: 669px;
+}
+
+.blog_section .all_news .news_img {
+  width: 328px;
+}
+
+.blog_section .all_news .main_news .content_main_news {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.blog_section .all_news .all_other_news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+.blog_section .all_news .all_other_news .content_other_news {
+  width: 328px;
+}
+
+.news {
+  background-color: #042C54;
+  margin-top: -5px;
+  padding: 15px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: flex-start;
+
+}
+
+.news p {
+  font-size: 12px;
+}
+
+.news h3 {
+  font-size: 19px;
+}
+
+.news a {
+  font-size: 12px;
+  margin-top: auto;
+  border-bottom: 1px solid transparent;
+}
+
+.news a:hover {
+  color: #f49867;
+  border-bottom: 1px solid #f49867;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
+/* Хотите шагнуть в будущее раньше других? */
+.step_into_future {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 7rem 0 5rem 0;
+  row-gap: 3rem;
+}
+
+.step_into_future .cta_buttons__singin {
+  border: #FFFFFF 1px solid;
+  background-color: transparent;
+  padding: 20px 60px;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.step_into_future .cta_buttons__singin:hover {
+  background-color: #ae67fa;
+  border-color: #ae67fa;
+}
+
+/* Футер */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8rem;
+  margin: 7rem 0rem;
+  padding: 10px;
+}
+
+.footer .footer_menu {
+  width: 66%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 5rem;
+  row-gap: 3rem;
+}
+
+.footer .columm_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1rem;
+
+}
+
+.footer a,
+p {
+  font-size: 12px;
+  border-bottom: 1px solid transparent;
+}
+
+.footer a:hover {
+  color: #f49867;
+  border-bottom: 1px solid #f49867;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+/* Надпись "© 2023 GPT-3. Все права защищены." */
+
+.law_protected {
+  background-color: #020e1b;
+  width: 100%;
+  text-align: center;
+}
+
+/* Медиа запросы для адаптива */
+
+@media screen and (max-width: 1366px) {
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .all_news {
+    row-gap: 2rem;
+    flex-direction: column !important;
+  }
+
+  .main_news {
+    flex-direction: row !important;
+    justify-content: center;
+  }
+
+  .blog_section .all_news .main_news img {
+    max-width: 328px;
+  }
+
+  .content_main_news {
+    width: 360px !important;
+    height: 227px !important;
+  }
+
+  .all_other_news {
+    justify-content: center;
+    margin: auto;
+    max-width: 700px;
+  }
+
+  .news {
+    margin-top: 0;
+  }
+
+  .content_other_news {
+    margin-top: -5px;
+  }
+
+  .blog_section .headder_section {
+    margin: auto auto 2rem auto;
+    text-align: center;
+  }
+
+  .registration {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .page {
+    align-content: center;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .header .header__logo .logo__link img {
+    width: 200%;
+  }
+
+  .header .header__right {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    row-gap: 53px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: #031b34;
+  }
+
+  .header .header__menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .header .header__menu .menu {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .header .header__menu .menu__close {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+  }
+
+  .header .header__menu .menu .menu__item a {
+    font-size: 48px;
+  }
+
+  .hero_section {
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 0;
+    /* margin: 0; */
+    width: 90%;
+  }
+
+  .hero_section .hero_section__left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero_section .hero_section__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_section .hero_section__right img {
+    width: 60%;
+  }
+
+  .hero_section .hero_section__left .left__cta_buttons {
+    justify-content: center;
+  }
+
+  .what_is_chatgpt_section {
+    row-gap: 4rem;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__middle {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container {
+    row-gap: 0;
+  }
+
+  .future_here {
+    column-gap: 0;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+
+  .future_here .future_here__left {
+    row-gap: 1rem;
+  }
+
+  .future_here .future_here__left h2 {
+    text-align: center;
+  }
+
+  .future_here .future_here__left a {
+    width: 100%;
+    text-align: right;
+  }
+
+  .exceeding_all_expectations {
+    flex-direction: column;
+    padding: 0 50px 0 50px;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_left {
+    display: flex;
+    justify-content: center;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_left img {
+    width: 40%;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_right {
+    text-align: center;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_right p {
+    width: 100%;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_right .left__header {
+    width: 100%;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_right .left__cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .registration {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
+  .hero_section {
+    width: 100%;
+  }
+
+  .brands_section {
+    margin-top: -15px;
+    padding-bottom: 0;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__top {
+    flex-direction: column;
+  }
+
+  .hero_section .hero_section__right img {
+    width: 85%;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
+    width: auto;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+    flex-direction: column;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+    row-gap: 2rem;
+  }
+
+  .what_is_chatgpt_section {
+    row-gap: 3rem;
+  }
+
+  .what_is_chatgpt_section {
+    margin: 6rem 0 0;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container .container__content {
+    line-height: 1.5;
+  }
+
+  .footer .footer_menu {
+    flex-wrap: wrap;
+  }
+
+  .brands_section {
+    flex-wrap: wrap;
+  }
+
+  .exceeding_all_expectations {
+    padding: 0 50px 0 50px;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_right .left__cta {
+    text-align: center;
+  }
+
+  .registration {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  a {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+    min-width: auto;
+  }
+
+  .future_here {
+    row-gap: 3rem;
+  }
+
+  .future_here .future_here__right .right__container {
+    flex-direction: column;
+  }
+
+  .future_here .future_here__right .right__container .container__header {
+    width: 100%;
+  }
+
+  .future_here .future_here__right .right__container .container__content {
+    width: 100%;
+  }
+
+  .future_here .future_here__right {
+    row-gap: 2rem;
+  }
+
+  .blog_section .main_news {
+    flex-direction: column !important;
+    margin: auto;
+  }
+
+  .blog_section .main_news .content_main_news {
+    width: 328px !important;
+    height: 350px;
+  }
+
+  .blog_section .all_other_news {
+    flex-direction: column !important;
+  }
+
+  .footer {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .footer .columm_menu {
+    margin: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer_menu {
+    margin: auto;
+  }
+
+  .header .header__right .menu__close {
+    right: 0;
+    top: -180px;
+  }
+
+  .blog_section {
+    margin-top: 0;
+  }
+
+  .footer {
+    margin: 0;
+  }
+
+  .exceeding_all_expectations {
+    padding: 0 50px 0 50px;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_right .left__cta {
+    text-align: center;
+  }
+
+  .registration {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer .footer_menu .columm_menu {
+    align-items: center;
+  }
+
+  .registration {
+    flex-direction: column;
+    row-gap: 10px;
+    width: 95%;
+  }
+
+  .registration .registration_content_left {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .registration .registration_content_left h3 {
+    width: 100% !important;
+  }
+
+  .registration .registration_button_right {
+    align-items: center;
+  }
+
+  .exceeding_all_expectations {
+    padding: 0 50px 0 50px;
+  }
+
+  .exceeding_all_expectations .exceeding_all_expectations_section_right .left__cta {
+    text-align: center;
+  }
+}
