@@ -1,9 +1,17 @@
+import initBurger from "./../components/initBurger.js";
+
 import initHeader from "./../components/initHeader.js";
 import initHero from "./../components/initHero.js";
 import initBrands from "./../components/initBrands.js";
 import initWhatIsGpt from "./../components/initWhatIsGpt.js";
 import initFutureHere from "./../components/initFutureHere.js";
-import initBurger from "./../components/initBurger.js";
+import initExceedingAllExpectations from "./../components/initExceedingAllExpectations.js";
+import initRegistration from "./../components/initRegistration.js";
+import initBlogSection from "./../components/initBlogSection.js";
+
+import initStepIntoFuture from "./../components/initStepIntoFuture.js";
+import initFooter from "./../components/initFooter.js";
+import initLawProtected from "./../components/initLawProtected.js";
 
 const initHomePage = (element) => {
   const template = `
@@ -12,6 +20,13 @@ const initHomePage = (element) => {
     <section class="section brands_section"></section>
     <section class="section what_is_chatgpt_section"></section>
     <section class="section future_here"></section>
+    <section class="section exceeding_all_expectations"></section>
+    <section class="section registration"></section>
+    <section class="section blog_section"></section>
+
+    <section class="section step_into_future"></section>
+    <section class="section footer"></section>
+    <section class="law_protected"></section>
   `;
 
   element.insertAdjacentHTML("beforeend", template);
@@ -35,15 +50,31 @@ const homePage = () => {
   // initHero(rootNode2);
 
   // инициализация хиро раздела
-  initBrands();
+  initBrands(rootNode1);
 
   // инициализация хиро раздела
-  initWhatIsGpt();
+  initWhatIsGpt(rootNode1);
 
   // инициализация раздела "Будущее наступило" с мок датой
-  initFutureHere();
+  initFutureHere(rootNode1);
 
+  // инициализация раздела "Превосходя все ожидания" с мок датой
+  initExceedingAllExpectations(rootNode1);
 
+  // инициализация раздела "Зарегистрируйся" с мок датой
+  initRegistration(rootNode1);
+
+  // инициализация раздела "Блог" с мок датой
+  initBlogSection(rootNode1)
+
+  // инициализация раздела "Шагнуть в будущее" с мок датой
+  initStepIntoFuture(rootNode2)
+
+  // инициализация раздела "Футер" с мок датой
+  initFooter(rootNode2)
+
+  // инициализация раздела "Все права защищены" с мок датой
+  initLawProtected(rootNode2)
 
   // инициализация бургера для адаптивного меню
   initBurger();
