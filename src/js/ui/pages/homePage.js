@@ -75,13 +75,13 @@ const homePage = () => {
   initBlogSection(rootNode1)
 
   // инициализация раздела "Шагнуть в будущее" с мок датой
-  initStepIntoFuture()
+  initStepIntoFuture(rootNode2)
 
   // инициализация раздела "Футер" с мок датой
-  initFooter()
+  initFooter(rootNode2)
 
   // инициализация раздела "Все права защищены" с мок датой
-  initLawProtected()
+  initLawProtected(rootNode2)
 
   // инициализация бургера для адаптивного меню
   initBurger();

@@ -15,3 +15,5 @@ export const exceedingAllExpectationsData = {
     header,
     description
 };
+
+export default exceedingAllExpectationsData

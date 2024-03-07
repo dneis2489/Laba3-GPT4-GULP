@@ -11,3 +11,5 @@ export const registrationData = {
     header,
     registrationCtaButtons
 };
+
+export default registrationData

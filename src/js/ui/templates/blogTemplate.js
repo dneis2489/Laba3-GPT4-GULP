@@ -71,10 +71,8 @@ export const createNewsTemplate = (mainAndOtherNews) => {
     const newsTemplate = mainAndOtherNews
         .map((news) => createInputTemplate(news));
 
-    console.log(newsTemplate)
-
-    const mainNewsTemplates = newsTemplate.filter((template) => template.includes('class="main_news"'));
-    const otherNewsTemplates = newsTemplate.filter((template) => template.includes('class="other_news"'));
+    const mainNewsTemplates = newsTemplate.filter((template) => template.includes('class="main_news"')).join('');
+    const otherNewsTemplates = newsTemplate.filter((template) => template.includes('class="other_news"')).join('');
 
     return { mainNewsTemplates, otherNewsTemplates };
 };
@@ -85,17 +83,15 @@ export const blogTemplate = ({
 }) => {
     const headerTemplate = createHeaderTemplate(header);
     const { mainNewsTemplates, otherNewsTemplates } = createNewsTemplate(news);
-    const mainNews = mainNewsTemplates.join('');
-    const otherNews = otherNewsTemplates.join('');
 
     const resultTemplate = `
         ${headerTemplate}
         <div class="all_news">
             <div class="all_main_news">
-                ${mainNews}
+                ${mainNewsTemplates}
             </div>
             <div class="all_other_news">
-                ${otherNews}
+                ${otherNewsTemplates}
             </div>
         </div>
     `;

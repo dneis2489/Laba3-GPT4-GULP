@@ -75,3 +75,5 @@ export const blogData = {
     header,
     news
 };
+
+export default blogData

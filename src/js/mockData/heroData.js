@@ -26,3 +26,5 @@ export const heroData = {
   heroCtaButtons,
   illustration,
 };
+
+export default heroData

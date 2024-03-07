@@ -1,4 +1,3 @@
-
 export const createInputsTemplate = (ctaButtons) => {
     return `
         <a href="#">
@@ -17,23 +16,12 @@ export const createHeaderTemplate = (header) => {
     `;
 };
 
-export const createDescriptionTemplate = (description) => {
-    return `
-      <p class="early_access">
-        ${description}
-      </p>
-    `;
-};
-
-
 
 export const registrationTemplate = ({
     header,
-    registrationCtaButtons,
-    description
+    registrationCtaButtons
 }) => {
     const headerTemplate = createHeaderTemplate(header);
-    const descriptionTemplate = createDescriptionTemplate(description);
     const buttonsTemplate = createInputsTemplate(registrationCtaButtons);
 
     const resultTemplate = `
