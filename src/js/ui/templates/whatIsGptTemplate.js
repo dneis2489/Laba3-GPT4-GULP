@@ -1,56 +1,18 @@
-import { createH2Elements } from "./elements/SimpleElements/createH2Elements.js";
-import { createH3Elements } from "./elements/SimpleElements/createH3Elements.js"
-import { createPElements } from "./elements/SimpleElements/createPElements.js";
-import { createAElements } from "./elements/SimpleElements/createAElements.js"
+import { createWhatIsGptBottom } from "./elements/WhatIsGptElements/createWhatIsGptBottom.js";
+import { createWhatIsGptMiddle } from "./elements/WhatIsGptElements/createWhatIsGptMiddle.js";
+import { createWhatIsGptTop } from "./elements/WhatIsGptElements/createWhatIsGptTop.js";
 
-export const createWhatIsGptTopTemplate = ({ header, content }) => {
-  const template = `
-        ${createH3Elements(header, "top__header lined_header")}
-        ${createPElements(content, "top__content")}
-    `;
-
-  return template;
-};
-
-export const createWhatIsGptMiddleTemplate = ({
-  header,
-  button
-}) => {
-  const template = `
-        ${createH2Elements(header, "middle__header")}
-        ${createAElements(button, "middle_cta")}
-    `;
-
-  return template;
-};
-
-export const createWhatIsGptContainerTemplate = ({ header, content }) => {
-  return `
-    <div class="bottom__container">
-        ${createH3Elements(header, "container__header lined_header")}
-        ${createPElements(content, "container__content")}
-    </div>
-    `;
-};
-
-export const createWhatIsGptBottomTemplate = (whatIsGptBottomData) => {
-  const template = whatIsGptBottomData
-    .map((item) => createWhatIsGptContainerTemplate(item))
-    .join("");
-
-  return template;
-};
 
 export const whatIsGptTemplate = ({
   whatIsGptTopData,
   whatIsGptMiddleData,
   whatIsGptBottomData,
 }) => {
-  const whatIsGptTopTemplate = createWhatIsGptTopTemplate(whatIsGptTopData);
+  const whatIsGptTopTemplate = createWhatIsGptTop(whatIsGptTopData);
   const whatIsGptMiddleTemplate =
-    createWhatIsGptMiddleTemplate(whatIsGptMiddleData);
+    createWhatIsGptMiddle(whatIsGptMiddleData);
   const whatIsGptBottomTemplate =
-    createWhatIsGptBottomTemplate(whatIsGptBottomData);
+    createWhatIsGptBottom(whatIsGptBottomData);
 
   const resultTemplate = `
         <div class="what_is_chatgpt_section__top">
