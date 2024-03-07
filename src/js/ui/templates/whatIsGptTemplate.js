@@ -1,11 +1,12 @@
+import { createH2Elements } from "./elements/SimpleElements/createH2Elements.js";
+import { createH3Elements } from "./elements/SimpleElements/createH3Elements.js"
+import { createPElements } from "./elements/SimpleElements/createPElements.js";
+import { createAElements } from "./elements/SimpleElements/createAElements.js"
+
 export const createWhatIsGptTopTemplate = ({ header, content }) => {
   const template = `
-        <h3 class="top__header lined_header">
-            ${header}
-        </h3>
-        <p class="top__content">
-            ${content}
-        </p>
+        ${createH3Elements(header, "top__header lined_header")}
+        ${createPElements(content, "top__content")}
     `;
 
   return template;
@@ -13,13 +14,11 @@ export const createWhatIsGptTopTemplate = ({ header, content }) => {
 
 export const createWhatIsGptMiddleTemplate = ({
   header,
-  button: { href, title },
+  button
 }) => {
   const template = `
-        <h2 class="middle__header">
-            ${header}
-        </h2>
-        <a href="${href}" class="middle_cta">${title}</a>
+        ${createH2Elements(header, "middle__header")}
+        ${createAElements(button, "middle_cta")}
     `;
 
   return template;
@@ -28,10 +27,8 @@ export const createWhatIsGptMiddleTemplate = ({
 export const createWhatIsGptContainerTemplate = ({ header, content }) => {
   return `
     <div class="bottom__container">
-        <h3 class="container__header lined_header">${header}</h3>
-        <p class="container__content">
-            ${content}
-        </p>
+        ${createH3Elements(header, "container__header lined_header")}
+        ${createPElements(content, "container__content")}
     </div>
     `;
 };

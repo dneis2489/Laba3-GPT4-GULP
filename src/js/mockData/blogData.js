@@ -4,7 +4,7 @@ export const news = [
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         date: "Сент 26, 2021",
         link: {
-            text: "Читать полную статью",
+            title: "Читать полную статью",
             href: "#"
         },
         illustration: {
@@ -17,7 +17,7 @@ export const news = [
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         date: "Сент 26, 2021",
         link: {
-            text: "Читать полную статью",
+            title: "Читать полную статью",
             href: "#"
         },
         illustration: {
@@ -30,7 +30,7 @@ export const news = [
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         date: "Сент 26, 2021",
         link: {
-            text: "Читать полную статью",
+            title: "Читать полную статью",
             href: "#"
         },
         illustration: {
@@ -43,7 +43,7 @@ export const news = [
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         date: "Сент 26, 2021",
         link: {
-            text: "Читать полную статью",
+            title: "Читать полную статью",
             href: "#"
         },
         illustration: {
@@ -56,7 +56,7 @@ export const news = [
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         date: "Сент 26, 2021",
         link: {
-            text: "Читать полную статью",
+            title: "Читать полную статью",
             href: "#"
         },
         illustration: {

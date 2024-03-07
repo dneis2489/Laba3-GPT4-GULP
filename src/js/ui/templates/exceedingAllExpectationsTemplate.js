@@ -1,37 +1,19 @@
-export const createIllustrationTemplate = ({ src, alt }) => {
-    return `
-      <img src="${src}" alt="${alt}" />
-    `;
-};
-
-export const createHeaderTemplate = (header) => {
-    return `
-      <h2 class="left__header">
-        ${header}
-      </h2>
-    `;
-};
-
-export const createDescriptionTemplate = (description) => {
-    return `
-      <p class="container__content">
-        ${description}
-      </p>
-    `;
-};
+import { createPElements } from "./elements/SimpleElements/createPElements.js";
+import { createImgElements } from "./elements/SimpleElements/createImgElements.js";
+import { createH2Elements } from "./elements/SimpleElements/createH2Elements.js";
 
 
 
 export const exceedingAllExpectationsTemplate = ({
-    illustration,
-    header,
-    description
+  illustration,
+  header,
+  description
 }) => {
-    const headerTemplate = createHeaderTemplate(header);
-    const descriptionTemplate = createDescriptionTemplate(description);
-    const illustrationTemplate = createIllustrationTemplate(illustration);
+  const headerTemplate = createH2Elements(header, "left__header");
+  const descriptionTemplate = createPElements(description, "container__content");
+  const illustrationTemplate = createImgElements(illustration, "exceedingAllExpectationsImg");
 
-    const resultTemplate = `
+  const resultTemplate = `
         <div class="exceeding_all_expectations_section_left">
             ${illustrationTemplate}
         </div>
@@ -47,5 +29,5 @@ export const exceedingAllExpectationsTemplate = ({
         </div>
     `;
 
-    return resultTemplate
+  return resultTemplate
 }

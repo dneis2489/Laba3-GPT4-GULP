@@ -1,12 +1,8 @@
-export const createBrandsImageTemplate = ({ src, alt }) => {
-  return `
-        <img class="brands_section__img" src="${src}" alt="${alt}" />      
-    `;
-};
+import { createImgElements } from "./elements/SimpleElements/createImgElements.js";
 
 export const brandsTemplate = (brandsData) => {
   const brandsImagesTemplate = brandsData
-    .map((brandData) => createBrandsImageTemplate(brandData))
+    .map((brandData) => createImgElements(brandData, "brands_section__img"))
     .join("");
 
   return brandsImagesTemplate;

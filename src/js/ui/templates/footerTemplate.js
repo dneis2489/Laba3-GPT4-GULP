@@ -1,24 +1,13 @@
-export const createHeaderTemplate = (header) => {
-    return `
-      <h3>
-        ${header}
-      </h3>
-    `;
-};
+import { createH3Elements } from "./elements/SimpleElements/createH3Elements.js"
+import { createPElements } from "./elements/SimpleElements/createPElements.js";
+import { createAElements } from "./elements/SimpleElements/createAElements.js"
 
-export const createDescriptionTemplate = (description) => {
-    return `
-      <p>
-        ${description}
-      </p>
-    `;
-};
 
 export const createContactsTemplate = ({ header, adress, phoneNumber, email }) => {
-    const headerTemplate = createHeaderTemplate(header);
-    const adressTemplate = createDescriptionTemplate(adress);
-    const phoneNumberTemplate = createDescriptionTemplate(phoneNumber);
-    const emailTemplate = createDescriptionTemplate(email);
+    const headerTemplate = createH3Elements(header, "contacts_header");
+    const adressTemplate = createPElements(adress, "adress");
+    const phoneNumberTemplate = createPElements(phoneNumber, "phone_number");
+    const emailTemplate = createPElements(email, "email");
 
     const resultTemplate = `
     <div class="contacts columm_menu">
@@ -32,8 +21,8 @@ export const createContactsTemplate = ({ header, adress, phoneNumber, email }) =
 }
 
 export const createGPT3Template = ({ header, description }) => {
-    const headerTemplate = createHeaderTemplate(header);
-    const descriptionTemplate = createDescriptionTemplate(description);
+    const headerTemplate = createH3Elements(header, "gpt3_header");
+    const descriptionTemplate = createPElements(description, "gpt3_description");
     const resultTemplate = `
         ${headerTemplate}
         ${descriptionTemplate}
@@ -43,9 +32,9 @@ export const createGPT3Template = ({ header, description }) => {
 }
 
 export const createLinksTemplate = ({ header, linkElements }, className) => {
-    const headerTemplate = createHeaderTemplate(header);
+    const headerTemplate = createH3Elements(header, "link_list_header");
     const linksTemplate = linkElements
-        .map((link) => createLinkList(link)).join('');
+        .map((link) => createAElements(link, "link_elem")).join('');
 
     const result = `
         <div class="${className}">
@@ -56,11 +45,6 @@ export const createLinksTemplate = ({ header, linkElements }, className) => {
 
     return result
 }
-
-export const createLinkList = ({ href, title }) => {
-    return `<a href="${href}" class="link_elem ">${title}</a>`
-}
-
 
 
 export const footerTemplate = ({

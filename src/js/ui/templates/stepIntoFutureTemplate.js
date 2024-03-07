@@ -1,27 +1,20 @@
-export const createInputsTemplate = (ctaButtons) => {
+import { createH1Elements } from "./elements/SimpleElements/createH1Elements.js";
+import { createButtonElements } from "./elements/SimpleElements/createButtonElements.js";
+
+
+export const createInputsTemplate = ({ title }) => {
     return `
         <a href="" class="cta_buttons">
-            <button class="cta_buttons__singin">
-                ${ctaButtons.title}
-            </button>
+            ${createButtonElements(title, "cta_buttons__singin")}
         </a>
     `
 };
-
-export const createHeaderTemplate = (header) => {
-    return `
-      <h1>
-        ${header}
-      </h1>
-    `;
-};
-
 
 export const stepIntoFutureTemplate = ({
     header,
     stepIntoFutureCtaButtons
 }) => {
-    const headerTemplate = createHeaderTemplate(header);
+    const headerTemplate = createH1Elements(header, "stepIntoFutureHeader");
     const buttonsTemplate = createInputsTemplate(stepIntoFutureCtaButtons);
 
     const resultTemplate = `

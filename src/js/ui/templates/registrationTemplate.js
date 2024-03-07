@@ -1,19 +1,12 @@
-export const createInputsTemplate = (ctaButtons) => {
+import { createH3Elements } from "./elements/SimpleElements/createH3Elements.js";
+import { createButtonElements } from "./elements/SimpleElements/createButtonElements.js";
+
+export const createInputsTemplate = ({ title }) => {
     return `
         <a href="#">
-            <button class="start_reg_btn btn">
-                ${ctaButtons.title}
-            </button>
+            ${createButtonElements(title, "start_reg_btn btn")}
         </a>
     `
-};
-
-export const createHeaderTemplate = (header) => {
-    return `
-      <h3 class="registration_text">
-        ${header}
-      </h3>
-    `;
 };
 
 
@@ -21,7 +14,7 @@ export const registrationTemplate = ({
     header,
     registrationCtaButtons
 }) => {
-    const headerTemplate = createHeaderTemplate(header);
+    const headerTemplate = createH3Elements(header, "registration_text");
     const buttonsTemplate = createInputsTemplate(registrationCtaButtons);
 
     const resultTemplate = `

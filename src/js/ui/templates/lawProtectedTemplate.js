@@ -1,19 +1,13 @@
-export const createLawProtectedTemplate = (description) => {
-    return `
-      <p>
-        ${description}
-      <p>
-    `;
-};
+import { createPElements } from "./elements/SimpleElements/createPElements.js";
 
 export const lawProtectedTemplate = ({
-    description
+  description
 }) => {
-    const lawProtectedTemplate = createLawProtectedTemplate(description);
+  const lawProtectedTemplate = createPElements(description, "lawProtectedDescription");
 
-    const resultTemplate = `
+  const resultTemplate = `
         ${lawProtectedTemplate}
     `;
 
-    return resultTemplate
+  return resultTemplate
 }
