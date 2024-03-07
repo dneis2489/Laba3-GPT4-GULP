@@ -21,9 +21,7 @@ export const exceedingAllExpectationsTemplate = ({
             <p class="early_access">
                 Запроси ранний доступ
             </p>
-            <h2 class="left__header">
-                ${headerTemplate}
-            </h2>
+            ${headerTemplate}
             ${descriptionTemplate}
             <a href="#" class="left__cta">Запросить ранний доступ</a>
         </div>
