@@ -12,9 +12,7 @@ export const blogTemplate = ({
     const resultTemplate = `
         ${headerTemplate}
         <div class="all_news">
-            <div class="all_main_news">
-                ${mainNewsTemplates}
-            </div>
+            ${mainNewsTemplates}
             <div class="all_other_news">
                 ${otherNewsTemplates}
             </div>
