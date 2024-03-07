@@ -4,12 +4,8 @@ import { createPElements } from "./elements/SimpleElements/createPElements.js";
 export const rightContainerTemplate = ({ title, description }) => {
   const template = `
     <div class="right__container">
-    <h3 class="container__header lined_header">
-        ${createH3Elements(title, "container__header lined_header")}
-    </h3>
-    <p class="container__content">
-        ${createPElements(description, "container__content")}
-    </p>
+      ${createH3Elements(title, "container__header lined_header")}
+      ${createPElements(description, "container__content")}
     </div>
 `;
 
@@ -18,7 +14,7 @@ export const rightContainerTemplate = ({ title, description }) => {
 
 export const futureHereTemplate = (data) => {
   // console.log(data);
-  const rightContainerTpl = data.map((item) => rightContainerTemplate(item));
+  const rightContainerTpl = data.map((item) => rightContainerTemplate(item)).join("");
 
   const parentTemplate = `
     <div class="future_here__left">
