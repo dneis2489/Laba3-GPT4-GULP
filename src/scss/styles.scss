@@ -571,7 +571,13 @@ p {
   column-gap: 3rem;
 }
 
-.blog_section .all_news .main_news {
+.blog_section .all_news .all_main_news {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+}
+
+.blog_section .all_news .all_main_news .main_news {
   display: flex;
   flex-direction: column;
   max-height: 669px;
@@ -581,7 +587,7 @@ p {
   width: 328px;
 }
 
-.blog_section .all_news .main_news .content_main_news {
+.blog_section .all_news .all_main_news .main_news .content_main_news {
   display: flex;
   height: 100%;
   width: 100%;

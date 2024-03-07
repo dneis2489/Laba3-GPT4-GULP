@@ -38,7 +38,9 @@ export const registrationTemplate = ({
 
     const resultTemplate = `
         <div class="registration_content_left">
-            ${descriptionTemplate}
+            <p class="early_access">
+                Запросите ранний доступ
+            </p>
             ${headerTemplate}
         </div>
         <div class="registration_button_right">

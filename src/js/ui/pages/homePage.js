@@ -23,10 +23,6 @@ const initHomePage1 = (element) => {
     <section class="section exceeding_all_expectations"></section>
     <section class="section registration"></section>
     <section class="section blog_section"></section>
-
-    <section class="section step_into_future"></section>
-    <section class="section footer"></section>
-    <section class="law_protected"></section>
   `;
 
   element.insertAdjacentHTML("beforeend", template);
@@ -79,13 +75,13 @@ const homePage = () => {
   initBlogSection(rootNode1)
 
   // инициализация раздела "Шагнуть в будущее" с мок датой
-  initStepIntoFuture(rootNode2)
+  initStepIntoFuture()
 
   // инициализация раздела "Футер" с мок датой
-  initFooter(rootNode2)
+  initFooter()
 
   // инициализация раздела "Все права защищены" с мок датой
-  initLawProtected(rootNode2)
+  initLawProtected()
 
   // инициализация бургера для адаптивного меню
   initBurger();
